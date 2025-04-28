@@ -4,12 +4,12 @@ FROM node:18
 # Set working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and install dependencies
+# Clone repo and install dependencies
 RUN git clone https://github.com/RoundRobinHood/psu-game.git .
 RUN npm install
 
 # Build the React app
-RUN npm run build
+RUN npx vite build --base=/t4
 
 # Use nginx to serve the build folder
 FROM nginx:alpine
