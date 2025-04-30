@@ -9,6 +9,11 @@ services:
     expose:
       - "80"
 
+  t4-site-content:
+    build: ./t4-site-content
+    expose:
+      - "80"
+
   node-red:
     build: ./nodered
     container_name: node-red

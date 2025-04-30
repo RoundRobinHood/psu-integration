@@ -5,7 +5,7 @@ FROM node:18
 WORKDIR /usr/src/app
 
 # Clone repo and install dependencies
-RUN git clone https://github.com/RoundRobinHood/psu-game.git .
+RUN git clone https://github.com/Exequtech/hydro-coding.git .
 RUN npm install
 
 # Build the React app
