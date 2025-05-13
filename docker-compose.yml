@@ -16,13 +16,13 @@ services:
 
   node-red:
     build: ./nodered
-    container_name: node-red
     ports:
       - "1880:1880"
+    volumes:
+      - ./data-nodered/:/data
 
   nginx:
     image: nginx:alpine
-    container_name: nginx-proxy
     ports:
       - "${HOST_PORT:-80}:80"
     volumes:
